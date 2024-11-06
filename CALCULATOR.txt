@@ -1,0 +1,36 @@
+pragma solidity >0.8.0;
+// SPDX-License-Identifier: MIT
+contract Calculator {
+    uint public a=24 ;
+    uint public b=12 ;
+    
+    uint public sumResult;
+    uint public subResult;
+    uint public mulResult;
+    uint public divResult;
+
+    // Constructor to initialize calculations
+    constructor() {
+        sumResult = sum(a, b);
+        subResult = subtract(a, b);
+        mulResult = multiply(a, b);
+        divResult = divide(a, b);
+    }
+    
+    // Pure functions
+    function sum(uint _a, uint _b) public pure returns (uint) {
+        return _a + _b;
+    }
+    
+    function subtract(uint _a, uint _b) public pure returns (uint) {
+        return _a - _b;
+    }
+
+    function multiply(uint _a, uint _b) public pure returns (uint) {
+        return _a * _b;
+    }
+    
+    function divide(uint _a, uint _b) public pure returns (uint) {
+        return _a / _b;
+    }
+}
